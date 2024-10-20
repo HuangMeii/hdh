@@ -3,162 +3,496 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biểu đồ So Sánh FCFS, SJF</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="styles.css"> <!-- Thêm dòng này -->
+    <title>Thông tin tiến trình</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+            color: #263f5b;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            color: #0B6477;
+            text-align: center;
+        }
+        h4 {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .input-form, .process-list {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .input-form {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .process-list {
+            flex: 1;
+        }
+        .time-input {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #0B6477;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #304e70;
+        }
+        .button1, .button2, .button3 {
+            background-color: #0AD1C8;
+            color: white;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .button1:hover, .button2:hover, .button3:hover {
+            background-color: #14919B;
+        }
+        .result-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .result-table {
+            width: 48%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #213A57;
+            padding: 8px;
+            text-align: center;
+            color: #213A57;
+        }
+        th {
+            background-color: #0B6477;
+            color: white;
+        }
+        .gantt-chart {
+            margin-top: 20px;
+            border: 1px solid #213A57;
+            padding: 10px;
+            background-color: #f0f2f5;
+            border-radius: 8px;
+        }
+        .gantt-row {
+            display: flex;
+            height: 40px;
+        }
+        .gantt-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #213A57;
+            box-sizing: border-box;
+            height: 100%;
+            font-weight: bold;
+            background-color: #45DFB1;
+            transition: background-color 0.3s ease;
+            color: #213A57; 
+        }
+        .gantt-bar:hover {
+            background-color: #0AD1C8;
+        }
+        .gantt-timeline {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            position: relative;
+        }
+        .timeline-label {
+            position: absolute;
+            font-size: 12px;
+            transform: translateX(-50%);
+            color: #608dc0;
+            font-weight: bold; 
+        }
+        .process-item {
+            text-align: center;
+            margin-bottom: 10px; 
+        }
+        .icon {
+            position: fixed;
+            font-size: 2em;
+            color: #0AD1C8;
+        }
+        .icon1 { top: 10px; left: 10px; }
+        .icon2 { top: 10px; right: 10px; }
+        .icon3 { bottom: 10px; left: 10px; }
+        .icon4 { bottom: 10px; right: 10px; }
+        .process-list table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .process-list th, .process-list td {
+            border: 1px solid #213A57;
+            padding: 8px;
+            text-align: center;
+            color: #213A57;
+        }
+
+        .process-list th {
+            background-color: #0B6477;
+            color: white;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Biểu đồ so sánh giữa các thuật toán</h1>
-    <div class="chart-container">
-        <div class="chart">
-            <h3>Thời gian chờ đợi</h3>
-            <canvas id="waitingChart"></canvas>
+    <div class="container">
+        <h1>Nhập thông tin tiến trình</h1>
+        <div class="input-container">
+            <form id="processForm" class="input-form">
+                <div class="time-input">
+                    <label for="arrivalTime">Thời gian đến:</label>
+                    <input type="number" id="arrivalTime" class="input1" required> <br>
+                </div>
+                <div class="time-input">
+                    <label for="executionTime">Thời gian thực hiện:</label>
+                    <input type="number" id="executionTime" class="input2" required>
+                </div>
+                <br>
+                <div>
+                    <button type="submit" class="button1">Thêm </button>
+                    <button id="resetData" type="button" class="button2">Xoá dữ liệu</button>
+                    <button id="showChart" class="button3">Tạo biểu đồ</button>
+                </div> 
+            </form>
+            <div id="processList" class="process-list">
+                <h2>Danh sách tiến trình</h2>
+            </div>
         </div>
-        <div class="chart">
-            <h3>Thông lượng</h3>
-            <canvas id="throughputChart"></canvas>
-        </div>
+
+        <h2>Bảng kết quả</h2>
+        <div id="resultTables" class="center-table"></div>
     </div>
-<!--  -->
+
+    <i class="fas fa-star icon icon1"></i>
+    <i class="fas fa-meteor icon icon2"></i>
+    <i class="fas fa-rocket icon icon3"></i>
+    <i class="fas fa-planet-moon icon icon4"></i>
+
     <script>
-        // Lấy dữ liệu từ localStorage
-        const waitingTimes = JSON.parse(localStorage.getItem('waitingTimes')) || { fcfs: 0, sjf: 0 };
-        const processes = JSON.parse(localStorage.getItem('processes')) || [];
+        const processes = []; // Mang luu danh sach tien trinh da nhap 
+        let processCount = 0; //Dem so luong tien trinh
 
-        // Tính thông lượng cho FCFS và SJF
-        function calculateThroughputOverTime(processes, algorithm) {
-    let time = 0;
-    let completedProcesses = 0;
-    const throughputData = [];
-    const maxTime = processes.reduce((sum, p) => sum + p.executionTime, 0);
+        // Xu ly su kien nhap vao 
+        document.getElementById('processForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngan tai lai trang
+            // Lay gia tri nhap vao thoi gian den va thoi gian thuc hien
+            const arrivalTime = document.getElementById('arrivalTime').value; 
+            const executionTime = document.getElementById('executionTime').value; 
 
-    const sortedProcesses = algorithm === 'SJF' 
-        ? [...processes].sort((a, b) => a.executionTime - b.executionTime)
-        : [...processes];
+            // Kiểm tra đầu vào
+            const numberPattern = /^[0-9]\d*$/;
+            if (!numberPattern.test(arrivalTime) || !numberPattern.test(executionTime)) {
+                alert('Lỗi giá trị! Vui lòng nhập số nguyên dương!');
+                return;
+            }
 
-    for (let currentTime = 0; currentTime <= maxTime; currentTime++) {
-        while (time <= currentTime && sortedProcesses.length > 0) {
-            const p = sortedProcesses.shift();
-            time += p.executionTime;
-            completedProcesses++;
-        }
-        throughputData.push({
-            time: currentTime,
-            throughput: completedProcesses / (currentTime || 1)
+            processCount++; // Tang so luong tien trinh len sau moi lan nhap
+            processes.push({ name: `P${processCount}`, arrivalTime: parseInt(arrivalTime), executionTime: parseInt(executionTime) }); // Them mot tien trinh vao mang
+            document.getElementById('processForm').reset(); // Dat lai gia tri nhap vao 
+            displayProcessList();
+            displayResults(); 
+            document.getElementById('arrivalTime').focus(); // Dat con tro chuot vao o nhap thoi gian den
         });
-    }
 
-    return throughputData;
-}
+        // Hien thi danh sach tien trinh (lay danh sach cac tien trinh tu mang)
+        // Hien thi danh sach tien trinh (lay danh sach cac tien trinh tu mang)
+        function displayProcessList() {
+            const processList = document.getElementById('processList');
+            processList.innerHTML = '<h2>Danh sách tiến trình</h2>';
+            
+            // Tạo bảng chứa danh sách tiến trình
+            const table = document.createElement('table');
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th>Tên tiến trình</th>
+                        <th>Thời gian đến</th>
+                        <th>Thời gian thực hiện</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            `;
 
-const fcfsThroughput = calculateThroughputOverTime(processes, 'FCFS');
-const sjfThroughput = calculateThroughputOverTime(processes, 'SJF');
+            const tbody = table.querySelector('tbody');
 
-console.log('Thông lượng FCFS:', fcfsThroughput);
-console.log('Thông lượng SJF:', sjfThroughput);
+            // Thêm các tiến trình vào bảng
+            processes.forEach(process => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${process.name}</td>
+                    <td>${process.arrivalTime}</td>
+                    <td>${process.executionTime}</td>
+                `;
+                tbody.appendChild(row);
+            });
 
-
-        // Dữ liệu cho biểu đồ thời gian chờ đợi
-        const waitingData = {
-            labels: ['FCFS', 'SJF'],
-            // Nhan vao 2 thuat toan FCFS va SJF
-            datasets: [{
-                // Tao ra 1 dataset voi 2 thuat toan FCFS va SJF
-                label: 'Thời gian chờ đợi trung bình',
-                data: [waitingTimes.fcfs, waitingTimes.sjf],
-                backgroundColor: 'rgba(253, 140, 132, 0.5)',
-            }]
-        };
-
-        // Dữ liệu cho biểu đồ thông lượng
-        const throughputData = {
-    labels: fcfsThroughput.map(d => d.time),
-    datasets: [
-        {
-            label: 'FCFS',
-            data: fcfsThroughput.map(d => d.throughput),
-            backgroundColor: 'rgba(75, 192, 192, 0.5)',
-            fill: true,
-        },
-        {
-            label: 'SJF',
-            data: sjfThroughput.map(d => d.throughput),
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-            fill: true,
+            // Thêm bảng vào div hiển thị
+            processList.appendChild(table);
         }
-    ]
-};
 
-        // Tạo biểu đồ thời gian chờ đợi
-        const ctxWaiting = document.getElementById('waitingChart').getContext('2d');
-        new Chart(ctxWaiting, {
-            type: 'bar',
-            // Loai bieu do la bar chart
-            data: waitingData,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Thời gian (đơn vị)'
-                        }
+
+        // Tinh toan theo thuat toan FCFS
+        function calculateFCFS() {
+          let currentTime = 0; // Thoi gian hien tai
+
+          return processes.map(process => {
+          // Neu thoi gian den cua tien trinh lon hon thoi gian hien tai
+          if (process.arrivalTime > currentTime) {
+            currentTime = process.arrivalTime; // Cap nhat thoi gian hien tai bang thoi gian den
+          }
+
+          const waitingTime = Math.max(0, currentTime - process.arrivalTime); 
+          // Thoi gian cho = thoi gian hien tai - thoi gian den, max de tranh gia tri am
+
+          const startTime = currentTime; // Thoi gian bat dau = thoi gian hien tai
+          currentTime += process.executionTime; // Cap nhat thoi gian hien tai sau khi thuc thi
+
+          // Tra ve thong tin cua tien trinh gom ten, thoi gian cho, thoi gian bat dau, thoi gian ket thuc
+          return { name: process.name, waitingTime, startTime, endTime: currentTime };
+          });
+        }
+
+
+        // Tinh toan theo thuat toan SJF
+        function calculateSJF() {
+            let currentTime = 0; // Thoi gian hien tai (tien trinh san sang thuc hien)
+            const completedProcesses = []; // Mang luu cac tien trinh da hoan thanh
+            const remainingProcesses = [...processes]; // Mang luu cac tien trinh con lai
+
+            while (remainingProcesses.length > 0) { // Khi con tien trinh chua hoan thanh
+                const availableProcesses = remainingProcesses.filter(p => p.arrivalTime <= currentTime);  // Lay cac tien trinh san sang thuc hien
+                if (availableProcesses.length === 0) { // Neu khong co tien trinh nao san sang thuc hien
+                    currentTime = Math.min(...remainingProcesses.map(p => p.arrivalTime));
+                    // Thoi gian hien tai = thoi gian den nho nhat trong cac tien trinh con lai
+                    continue;
+                }
+
+                const shortestJob = availableProcesses.reduce((prev, curr) => 
+                    prev.executionTime < curr.executionTime ? prev : curr
+                );
+                // Tim tien trinh co thoi gian thuc hien nho nhat trong cac tien trinh san sang thuc hien
+
+                const waitingTime = currentTime - shortestJob.arrivalTime;
+                // Thoi gian cho = thoi gian hien tai - thoi gian den
+                completedProcesses.push({
+                  // Them tien trinh vao mang cac tien trinh da hoan thanh
+                    name: shortestJob.name,
+                    waitingTime,
+                    startTime: currentTime,
+                    endTime: currentTime + shortestJob.executionTime
+                });
+
+                currentTime += shortestJob.executionTime; // Cap nhat thoi gian hien tai
+                remainingProcesses.splice(remainingProcesses.findIndex(p => p.name === shortestJob.name), 1);
+                // Xoa tien trinh da hoan thanh khoi mang cac tien trinh con lai (dung splice de xoa phan tu trong mang)
+            }
+
+            return completedProcesses;
+        }
+
+        // Tinh theo thuat toan SJG khong doc quyen
+        function calculateSRJF() {
+            let currentTime = 0; // Thoi gian hien tai
+            const ganttChart = []; // Mang luu thoi gian thuc hien cua cac tien trinh de tao bieu do Gantt
+            const remainingProcesses = processes.map(p => ({...p, remainingTime: p.executionTime})); 
+            // Tao mot mang luu thoi gian thuc hien con lai cua cac tien trinh
+            let currentProcess = null; 
+            // Bien luu tien trinh hien tai duoc thuc hien
+
+            while (remainingProcesses.length > 0 || currentProcess) {
+              // Vong lap se chay khi con tien trinh chua hoan thanh hoac co tien trinh hien tai
+                const newArrivals = remainingProcesses.filter(p => p.arrivalTime <= currentTime);
+                // Lay ra cac tien trinh moi den (chua den hoac vua den thoi gian den)
+
+                if (currentProcess) newArrivals.push(currentProcess);
+                // Neu co tien trinh dang thuc hien thi them vao mang newArrivals
+                if (newArrivals.length === 0) { // Neu khong co tien trinh nao san sang thuc hien
+                    currentTime = Math.min(...remainingProcesses.map(p => p.arrivalTime));
+                    // Thoi gian hien tai = thoi gian den nho nhat trong cac tien trinh con lai
+                    continue;
+                }
+                
+                    currentProcess = newArrivals.reduce((prev, curr) => 
+                    prev.remainingTime < curr.remainingTime ? prev : curr
+                );
+                // Tim tien trinh co thoi gian thuc hien con lai nho nhat
+                
+                const nextEvent = Math.min(
+                    ...remainingProcesses
+                        .filter(p => p.arrivalTime > currentTime)
+                        .map(p => p.arrivalTime)
+                        .concat(currentTime + currentProcess.remainingTime)
+                );
+                
+                const executionTime = nextEvent - currentTime;
+                
+                if (ganttChart.length > 0 && ganttChart[ganttChart.length - 1].name === currentProcess.name) {
+                    ganttChart[ganttChart.length - 1].endTime = nextEvent;
+                } else {
+                    ganttChart.push({ name: currentProcess.name, startTime: currentTime, endTime: nextEvent });
+                }
+                
+                currentProcess.remainingTime -= executionTime;
+                currentTime = nextEvent;
+                
+                if (currentProcess.remainingTime === 0) {
+                    remainingProcesses.splice(remainingProcesses.findIndex(p => p.name === currentProcess.name), 1);
+                    currentProcess = null;
+                }
+            }
+            
+            return ganttChart;
+        }
+
+        function createGanttChart(processes, algorithm, preemptive = false) {
+            let totalTime = Math.max(...processes.map(p => p.endTime));
+            let html = `<h3>${algorithm}</h3><div class="gantt-chart"><div class="gantt-row">`;
+            
+            for (let i = 0; i < processes.length; i++) {
+                let process = processes[i];
+                
+                // Nếu đây không phải là tiến trình đầu tiên, kiểm tra thời gian trống giữa tiến trình trước và tiến trình hiện tại
+                if (i > 0) {
+                    let previousProcess = processes[i - 1];
+                    if (process.startTime > previousProcess.endTime) {
+                        let idleTime = process.startTime - previousProcess.endTime;
+                        let idleWidthPercent = (idleTime / totalTime) * 100; // Chiều rộng tỉ lệ của thời gian trống
+                        html += `<div class="gantt-bar idle-bar" style="width: ${idleWidthPercent}%; background-color: #f0f0f0;"></div>`;
                     }
                 }
-            }
-        });
-        // Tao bieu do thoi gian cho FCFS va SJF
 
-        // Tạo biểu đồ thông lượng
-        const ctxThroughput = document.getElementById('throughputChart').getContext('2d');
-new Chart(ctxThroughput, {
-    type: 'line',
-    data: {
-        labels: fcfsThroughput.map(d => d.time),
-        datasets: [
-            {
-                label: 'FCFS',
-                data: fcfsThroughput.map(d => d.throughput),
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                fill: true,
-            },
-            {
-                label: 'SJF',
-                data: sjfThroughput.map(d => d.throughput),
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                fill: true,
+                // Tính toán chiều rộng và vị trí của tiến trình
+                let widthPercent = ((process.endTime - process.startTime) / totalTime) * 100;
+                // Chiều rộng tỉ lệ của tiến trình  
+                let leftPercent = (process.startTime / totalTime) * 100;
+                // Vị trí tỉ lệ của tiến trình
+                html += `<div class="gantt-bar" style="width: ${widthPercent}%; left: ${leftPercent}%; background-color: #B5DDD1;">${process.name}</div>`;
+                // Thêm tiến trình vào biểu đồ Gantt
             }
-        ]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            title: {
-                display: true,
-                text: 'Biểu đồ thông lượng theo thời gian'
-            }
-        },
-        scales: {
-            x: {
-                type: 'linear',
-                title: {
-                    display: true,
-                    text: 'Thời gian (giây)'
-                }
-            },
-            y: {
-                title: {
-                    display: true,
-                    text: 'Thông lượng (tiến trình/giây)'
-                },
-                min: 0,
-            }
-        },
-    },
-});
-        // Tao bieu do thong luong cho FCFS va SJF
+            
+            html += '</div><div class="gantt-timeline">';
+            // Tạo các điểm thời gian trên trục thời gian
+            let timePoints = [...new Set(processes.flatMap(p => [p.startTime, p.endTime]))].sort((a, b) => a - b);
+            timePoints.forEach(time => {
+              
+                html += `<span class="timeline-label" style="left: ${(time / totalTime) * 100}%;">${time}</span>`;
+            });
+            // Thêm các điểm thời gian vào biểu đồ Gantt
+
+            return html + '</div></div>';
+            // Tra ve bieu do Gantt
+        }
+
+        function displayResults() {
+            const fcfsResults = calculateFCFS();
+            const sjfResults = calculateSJF();
+            const srjfResults = calculateSRJF();
+
+            const fcfsWaiting = fcfsResults.reduce((sum, p) => sum + p.waitingTime, 0) / processes.length;
+            // Thoi gian cho trung binh cua FCFS
+            const sjfWaiting = sjfResults.reduce((sum, p) => sum + p.waitingTime, 0) / processes.length;
+            // Thoi gian cho trung binh cua SJF
+            
+            localStorage.setItem('waitingTimes', JSON.stringify({ fcfs: fcfsWaiting, sjf: sjfWaiting }));
+            // Luu thoi gian cho trung binh vao local storage
+            localStorage.setItem('totalTimes', JSON.stringify({
+                fcfs: fcfsResults.reduce((sum, p) => sum + p.executionTime, 0),
+                sjf: sjfResults.reduce((sum, p) => sum + p.executionTime, 0)
+            }));
+            // Luu thoi gian thuc hien trung binh vao local storage
+            localStorage.setItem('numberOfProcesses', processes.length);
+            // Luu so luong tien trinh vao local storage
+            localStorage.setItem('processes', JSON.stringify(processes));
+            // Luu danh sach tien trinh vao local storage
+
+            document.getElementById('resultTables').innerHTML = `
+                <div class="result-container">
+                    <div class="result-table">
+                        <h3>FCFS</h3>
+                        <table>
+                            <tr><th>Tiến Trình</th><th>Thời gian chờ đợi</th></tr>
+                            ${fcfsResults.map((result) => `<tr><td>${result.name}</td><td>${result.waitingTime}</td></tr>`).join('')}
+                        </table>
+                        ${createGanttChart(fcfsResults, 'Biểu đồ Gantt độc quyền')}
+                    </div>
+                    <div class="result-table">
+                        <h3>SJF</h3>
+                        <table>
+                            <tr><th>Tiến Trình</th><th>Thời gian chờ đợi</th></tr>
+                            ${sjfResults.map((result) => `<tr><td>${result.name}</td><td>${result.waitingTime}</td></tr>`).join('')}
+                        </table>
+                        ${createGanttChart(sjfResults, 'Biểu đồ Gantt độc quyền')}
+                        ${createGanttChart(srjfResults, 'Không độc quyền (SRJF)', true)}
+                    </div>
+                </div>
+            `;
+            // Hien thi ket qua va bieu do Gantt
+        }
+
+        document.getElementById('showChart').addEventListener('click', () => window.location.href = 'HDH.html');
+        // Xu ly su kien click vao nut tao bieu do
+        document.getElementById('resetData').addEventListener('click', function() {
+            localStorage.removeItem('waitingTimes');
+            
+            processes.length = 0;
+            // Xoa tat ca cac tien trinh trong mang
+            processCount = 0;
+            // Dat lai so luong tien trinh
+            window.location.reload();
+            // Reload lai trang
+        });
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
