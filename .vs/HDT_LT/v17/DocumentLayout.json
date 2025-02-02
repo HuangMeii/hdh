@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\HocKi4\\HDT\\HDT_LT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\bai1\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|d:\\hocki4\\hdt\\hdt_lt\\tuan_1\\bai1\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\bai1\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|d:\\hocki4\\hdt\\hdt_lt\\tuan_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\bai4\\hinhtron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\bai4\\hinhtron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\bai3\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,12 +50,11 @@
               "RelativeToolTip": "Tuan_1\\Bai2\\PhanSo.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAiwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T08:51:49.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-02T08:51:49.894Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HinhTron.cs",
               "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Bai4\\HinhTron.cs",
               "RelativeDocumentMoniker": "Tuan_1\\Bai4\\HinhTron.cs",
@@ -63,21 +62,19 @@
               "RelativeToolTip": "Tuan_1\\Bai4\\HinhTron.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T08:50:27.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-02T08:50:27.933Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Program.cs",
               "RelativeDocumentMoniker": "Tuan_1\\Program.cs",
               "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Program.cs",
               "RelativeToolTip": "Tuan_1\\Program.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCEAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAIAwwBoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T08:42:00.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-02T08:42:00.681Z"
             },
             {
               "$type": "Document",
@@ -87,7 +84,7 @@
               "RelativeDocumentMoniker": "Tuan_1\\Bai1\\NhanVien.cs",
               "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Bai1\\NhanVien.cs",
               "RelativeToolTip": "Tuan_1\\Bai1\\NhanVien.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T01:23:33.693Z",
               "EditorCaption": ""
@@ -100,10 +97,9 @@
               "RelativeDocumentMoniker": "Tuan_1\\Bai3\\SinhVien.cs",
               "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Bai3\\SinhVien.cs",
               "RelativeToolTip": "Tuan_1\\Bai3\\SinhVien.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA+wCwAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAqwCwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T08:43:26.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T08:43:26.959Z"
             },
             {
               "$type": "Document",

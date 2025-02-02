@@ -3,57 +3,74 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.RegularExpressions;
 
 namespace Tuan_1
 {
     internal class NhanVien
     {
         string maNV;
-        public string MaNV
+        public string LayMaNV()
         {
-            get { return maNV; }
-            set { maNV = value;
+            return maNV; 
+        }
 
-            if (Regex.IsMatch(value, @"[^a-zA-Z0-9]"))
-                throw new ArgumentException("Ma khong chua ki tu dac biet");
+        public void SetMaNV(string maN)
+        {
+            if (string.IsNullOrEmpty(maN))
+                throw new ArgumentException("Ma trong khong!");
+            if (maN.Length != 5)
+                throw new ArgumentException("Loi do dai!");
+            const int KiTu = 2;
+            for (int i = 0; i < KiTu; i++)
+            {
+                char s = maN[i];
+                if(s <'A' || s > 'z')
+                {
+                    throw new ArgumentException("Loi ma");
+                }
             }
 
+            for (int i = maN.Length-1; i >= KiTu; i--)
+            {
+                if (maN[i] < '0' || maN[i] > '9')
+                    throw new ArgumentException("Loi ma");
+            }
+            this.maNV = maN;
         }
 
         string hoTen;
-        public string HoTen
+        public string LayHoTen()
         {
-            get { return hoTen; }
-            set { hoTen = value; }
+            return hoTen;
+        }
+        public void SetHoTen(string hoTen) {
+            if (hoTen == null)
+                throw new ArgumentException("Ma trong khong!");
+            if (hoTen.Length <= 1)
+                throw new ArgumentException("Loi do dai!");
+            this.hoTen = hoTen;
         }
 
         int soNC;
-        public int SoNC
+        public int LaySoNC()
         {
-            get { return soNC; }
-            set { 
-                if (soNC < 10)
-                {
-                    Console.WriteLine("{0}", soNC);
-                }
-                else
-                    soNC = value;
-            }
+            return soNC;
+        }
+        public void SetSoNC(int soNC) {
+            if (soNC <= 0)
+                throw new ArgumentException("Gia tri khong am hoac bang 0!");
+            this.soNC = soNC;
         }
 
-        public char XepLoai
+        public char XepLoai()
         {
             //Thuộc tính xếp loại không có set, vì giá trị xếp loại dựa theo số ngày công nên không được gián giá trị tùy ý
-            get
-            {
-                if (SoNC >= 26)
+                if (soNC >= 26)
                     return 'A';
-                else if (SoNC >= 22)
+                else if (soNC >= 22)
                     return 'B';
                 else
                     return 'C';
-            }
         }
 
         //Thuộc tính lương - ngày áp dụng chung cho tất cả nhân viên nên là thành phần static
@@ -62,54 +79,67 @@ namespace Tuan_1
         //Phương thức khởi tạo
         public NhanVien()
         {
-            MaNV = "3002";
-            HoTen = "Van Hoa";
-            SoNC = 25;
+            //Để trống lỏng 
         }
 
         //Khi khởi tạo giá trị cho nhân viên chỉ khởi tạo 3 thuộc tính: MaNV, HoTen, SoNC
         public NhanVien(string maNV, string hoTen, int soNC)
         {
-            this.MaNV = maNV;
-            this.HoTen = hoTen;
-            this.SoNC = soNC;
+            SetMaNV(maNV);
+            SetHoTen(hoTen);
+            SetSoNC(soNC);
         }
 
         public NhanVien(NhanVien n) { 
-        
-            this.MaNV = n.MaNV;
-            this.HoTen = n.HoTen;
-            this.SoNC = n.SoNC;
+            SetMaNV(maNV);
+            SetHoTen(hoTen);
+            SetSoNC(soNC);
         }
 
         //Các phương thức xử lí khác
         public void Nhap()
         {
-            Console.Write("\n\nMa nhan vien: ");
-            MaNV = Console.ReadLine();
-            Console.Write("\nHo ten nhan vien: ");
-            HoTen = Console.ReadLine();
-            Console.Write("\nSo ngay cong: ");
-            SoNC = int.Parse(Console.ReadLine());
+            while (true)
+            {
+                try
+                {
+                    Console.Write("\n\nMa nhan vien: ");
+                    string maMoi = Console.ReadLine();
+                    Console.Write("\nHo ten nhan vien: ");
+                    string tenMoi = Console.ReadLine();
+                    Console.Write("\nSo ngay cong: ");
+                    int ngayMoi = int.Parse(Console.ReadLine());
+
+                    SetMaNV(maMoi);
+                    SetHoTen(tenMoi);
+                    SetSoNC(ngayMoi);
+                    break; // Thoát khỏi vòng lặp nếu nhập thành công
+                }
+                catch (Exception r)
+                {
+                    Console.WriteLine("Loi: {0}", r.Message);
+                    Console.WriteLine("Vui long nhap lai thong tin.");
+                }
+            }
         }
 
         double TinhLuong()
         {
-            return SoNC * LuongNgay;
+            return LaySoNC() * LuongNgay;
         }
 
         public double TinhThuong()
         {
-            if (XepLoai == 'A')
+            if (XepLoai() == 'A')
                 return TinhLuong() * 5 / 100;
-            else if (XepLoai == 'B')
+            else if (XepLoai() == 'B')
                 return TinhLuong() * 2 / 100;
             else return 0;
         }
 
         public void Xuat()
         {
-            Console.Write("{0} - {1}: {2} - {3} - {4} / {5}", MaNV, HoTen, SoNC, XepLoai, TinhLuong(), TinhThuong());
+            Console.Write("{0} - {1}: {2} - {3} - {4} / {5}", LayMaNV(), LayHoTen(), LaySoNC(), XepLoai(), TinhLuong(), TinhThuong());
         }
     }
 }
