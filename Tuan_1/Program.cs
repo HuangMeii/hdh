@@ -67,7 +67,7 @@ namespace Tuan_1
                             b.Xuat();
 
                             PhanSo c = new PhanSo();
-                            c = c.Tong(a, b);
+                            c = c.TinhTong(a, b);
 
                             Console.Write("\n\ntong hai phan so: ");
                             c.ToiGian();

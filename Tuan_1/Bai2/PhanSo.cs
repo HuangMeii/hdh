@@ -9,7 +9,7 @@ namespace Tuan_1
 {
     class PhanSo
     {
-        int tuSo, mauSo;
+        private int tuSo, mauSo;
         public void Nhap()
         {
             Console.Write("\n\nNhap tu: ");
@@ -34,6 +34,13 @@ namespace Tuan_1
             return UCLN(a, b - a);
         }
 
+        int UCLN1(int a, int b)
+        {
+            if (b == 0)
+                return a;
+            return UCLN(b, a % b);
+        } // Thuật toán Euclid giảm số lần đệ quy
+
         public void ToiGian()
         {
             int ucln = UCLN(tuSo, mauSo);
@@ -42,7 +49,7 @@ namespace Tuan_1
             Xuat();
         }
 
-        public PhanSo Tong(PhanSo a, PhanSo b)
+        public PhanSo TinhTong(PhanSo a, PhanSo b)
         {
             PhanSo c = new PhanSo();
             c.tuSo = a.tuSo * b.mauSo + b.tuSo * a.mauSo;

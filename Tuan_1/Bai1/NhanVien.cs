@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Tuan_1
 {
-    internal class NhanVien
+    class NhanVien
     {
-        string maNV;
+        private string maNV;
         public string LayMaNV()
         {
             return maNV; 
@@ -38,20 +38,26 @@ namespace Tuan_1
             this.maNV = maN;
         }
 
-        string hoTen;
+        private string hoTen;
         public string LayHoTen()
         {
             return hoTen;
         }
         public void SetHoTen(string hoTen) {
             if (hoTen == null)
-                throw new ArgumentException("Ma trong khong!");
-            if (hoTen.Length <= 1)
-                throw new ArgumentException("Loi do dai!");
+                throw new ArgumentException("Ten trong khong!");
+            for (int i = 0; i < hoTen.Length; i++)
+            {
+                char s = hoTen[i];
+                if (s < 'A' || s > 'z')
+                {
+                    throw new ArgumentException("Loi ten");
+                }
+            }
             this.hoTen = hoTen;
         }
 
-        int soNC;
+        private int soNC;
         public int LaySoNC()
         {
             return soNC;
@@ -65,9 +71,9 @@ namespace Tuan_1
         public char XepLoai()
         {
             //Thuộc tính xếp loại không có set, vì giá trị xếp loại dựa theo số ngày công nên không được gián giá trị tùy ý
-                if (soNC >= 26)
+                if (LaySoNC() >= 26)
                     return 'A';
-                else if (soNC >= 22)
+                else if (LaySoNC() >= 22)
                     return 'B';
                 else
                     return 'C';
@@ -91,9 +97,9 @@ namespace Tuan_1
         }
 
         public NhanVien(NhanVien n) { 
-            SetMaNV(maNV);
-            SetHoTen(hoTen);
-            SetSoNC(soNC);
+            SetMaNV(n.maNV);
+            SetHoTen(n.hoTen);
+            SetSoNC(n.soNC);
         }
 
         //Các phương thức xử lí khác
@@ -105,9 +111,9 @@ namespace Tuan_1
                 {
                     Console.Write("\n\nMa nhan vien: ");
                     string maMoi = Console.ReadLine();
-                    Console.Write("\nHo ten nhan vien: ");
+                    Console.Write("Ho ten nhan vien: ");
                     string tenMoi = Console.ReadLine();
-                    Console.Write("\nSo ngay cong: ");
+                    Console.Write("So ngay cong: ");
                     int ngayMoi = int.Parse(Console.ReadLine());
 
                     SetMaNV(maMoi);
@@ -139,7 +145,10 @@ namespace Tuan_1
 
         public void Xuat()
         {
-            Console.Write("{0} - {1}: {2} - {3} - {4} / {5}", LayMaNV(), LayHoTen(), LaySoNC(), XepLoai(), TinhLuong(), TinhThuong());
+            Console.WriteLine("{0,-10} {1,-20} {2,5} {3,2} {4,10:C} {5,10:C}", LayMaNV(), LayHoTen(), LaySoNC(), XepLoai(), TinhLuong(), TinhThuong());
+
         }
     }
+
+
 }

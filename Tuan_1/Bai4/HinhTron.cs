@@ -6,38 +6,49 @@ using System.Threading.Tasks;
 
 namespace Tuan_1.Bai4
 {
-    internal class HinhTron
+    class HinhTron
     {
-        double r;
-        public double R //Property với ràng buộc bán kính lớn hơn 0
+        private double banKinh;
+        public HinhTron() {
+        }
+        
+        public HinhTron(double r) {
+            SetBanKinh(r);
+        }
+
+        public double LayBanKinh() {
+            return banKinh;
+        } 
+
+        public void SetBanKinh(double r) {
+            if (r <= 0)
+                throw new ArgumentException("Loi gia tri!");
+            banKinh = r;
+        }
+        public void Nhap()
         {
-            get { return r; }
-            set
+            while (true)
             {
-                if (value < 0)
+                try
                 {
-                    Console.WriteLine("Du lieu bi loi!");
-                    r = 0;
+                    Console.Write("Ban kinh: ");
+                    double banKinhMoi = double.Parse(Console.ReadLine());
+                    SetBanKinh(banKinhMoi);
+                    break;
                 }
-                else
-                    r = value;
+                catch (Exception er)
+                {
+                    Console.WriteLine("Loi: {0}\nVui long nhap lai!", er);
+                }
             }
         }
 
-        public HinhTron()
-        {
-            this.R = 0;  //khởi tạo không tham số
-        }
-        
-        public HinhTron(double r)
-        {
-            this.R = r;  //khởi tạo có tham số
+        public double TinhChuVi() {
+            return 2 * LayBanKinh() * Math.PI;
         }
 
-        public void Nhap()
-        {
-            Console.Write("Ban kinh: ");
-            this.R = double.Parse(Console.ReadLine());
+        public double TinhDienTich() {
+            return Math.Pow(LayBanKinh(), 2) * Math.PI;
         }
     }
 }

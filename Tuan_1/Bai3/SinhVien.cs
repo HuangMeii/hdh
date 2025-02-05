@@ -8,20 +8,78 @@ namespace Tuan_1
 {
     class SinhVien
     {
-        string maSV;
-        string hoTen;
-        double dtb;
-        string kq;
+        private string maSV;
+        private string hoTen;
+        private double dtb;
+        private string kq;
+        public string LayMSV ()
+        {
+            return maSV;
+        }
+        public void SetMSV(string ma)
+        {
+            if (ma == null)
+                throw new ArgumentNullException("Ma trong");
+            for (int i = 0; i < ma.Length; i++)
+                if (ma[i] < 'A' || ma[i] > 'z')
+                    throw new ArgumentException("Loi ma");
+            this.maSV = ma;
+        }
+        public string LayHoTen()
+        {
+            return hoTen;
+        }
+        public void SetHoTen(string hoten)
+        {
+            if (hoten == null)
+                throw new ArgumentNullException("Ten trong");
+            for (int i = 0; i < hoten.Length; i++)
+                if (hoten[i] < 'A' || hoten[i] > 'z')
+                    throw new ArgumentException("Loi ten");
+            this.hoTen = hoten;
+        }
+
+        public double LayDTB()
+        {
+            return dtb;
+        }
+        public void SetDTB(double diem)
+        {
+            if (diem < 0)
+                throw new Exception("Diem so khong am!");
+            this.dtb = diem;
+        }
+        
+        public string LayKQ()
+        {
+            return kq;
+        }
         public void NhapSV()
         {
-            Console.Write("\nMa: ");
-            maSV = Console.ReadLine();
-            Console.Write("Ho ten: ");
-            hoTen = Console.ReadLine();
-            Console.Write("Diem trung binh: ");
-            dtb = double.Parse(Console.ReadLine());
-            if (dtb < 0)
-                throw new Exception("Diem so khong am!");
+            while (true)
+            {
+                try
+                {
+                    Console.Write("\nMa: ");
+                    string maMoi = Console.ReadLine();
+                    Console.Write("Ho ten: ");
+                    string tenMoi = Console.ReadLine();
+                    Console.Write("Diem trung binh: ");
+                    double diemMoi = double.Parse(Console.ReadLine());
+                   
+                    SetMSV(maMoi);
+                    SetHoTen(tenMoi);
+                    SetDTB(diemMoi);
+                    XetKetQua();
+
+                    break;          
+                }
+                catch (Exception er)
+                {
+                    Console.WriteLine("\nLỗi: {0}", er);
+                    Console.WriteLine("Nhap lai!");
+                }
+            }
         }
 
         void XetKetQua()
@@ -42,7 +100,6 @@ namespace Tuan_1
 
         public void Xuat()
         {
-            XetKetQua();
             Console.Write("\n\nMa: {0}", maSV);
             Console.Write("\nHo ten: {0}", hoTen);
             Console.Write("\nDiem trung binh: {0}", dtb);
