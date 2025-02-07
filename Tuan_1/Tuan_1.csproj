@@ -40,6 +40,7 @@
     <Compile Include="Bai2\PhanSo.cs" />
     <Compile Include="Bai4\HinhTron.cs" />
     <Compile Include="BaiTap4-17\HoaDon.cs" />
+    <Compile Include="ViDu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Bai3\SinhVien.cs" />
   </ItemGroup>
