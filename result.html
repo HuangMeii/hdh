@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu đồ So Sánh FCFS, SJF</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Thêm dòng này -->
+</head>
+<body>
+    <h1>Biểu đồ so sánh giữa các thuật toán</h1>
+    <div class="chart-container">
+        <div class="chart">
+            <h3>Thời gian chờ đợi</h3>
+            <canvas id="waitingChart"></canvas>
+        </div>
+        <div class="chart">
+            <h3>Thông lượng</h3>
+            <canvas id="throughputChart"></canvas>
+        </div>
+    </div>
+<!--  -->
+    <script>
+        // Lấy dữ liệu từ localStorage
+        const waitingTimes = JSON.parse(localStorage.getItem('waitingTimes')) || { fcfs: 0, sjf: 0 };
+        const processes = JSON.parse(localStorage.getItem('processes')) || [];
+
+        // Tính thông lượng cho FCFS và SJF
+        function calculateThroughputOverTime(processes, algorithm) {
+    let time = 0;
+    let completedProcesses = 0;
+    const throughputData = [];
+    const maxTime = processes.reduce((sum, p) => sum + p.executionTime, 0);
+
+    const sortedProcesses = algorithm === 'SJF' 
+        ? [...processes].sort((a, b) => a.executionTime - b.executionTime)
+        : [...processes];
+
+    for (let currentTime = 0; currentTime <= maxTime; currentTime++) {
+        while (time <= currentTime && sortedProcesses.length > 0) {
+            const p = sortedProcesses.shift();
+            time += p.executionTime;
+            completedProcesses++;
+        }
+        throughputData.push({
+            time: currentTime,
+            throughput: completedProcesses / (currentTime || 1)
+        });
+    }
+
+    return throughputData;
+}
+
+const fcfsThroughput = calculateThroughputOverTime(processes, 'FCFS');
+const sjfThroughput = calculateThroughputOverTime(processes, 'SJF');
+
+console.log('Thông lượng FCFS:', fcfsThroughput);
+console.log('Thông lượng SJF:', sjfThroughput);
+
+
+        // Dữ liệu cho biểu đồ thời gian chờ đợi
+        const waitingData = {
+            labels: ['FCFS', 'SJF'],
+            // Nhan vao 2 thuat toan FCFS va SJF
+            datasets: [{
+                // Tao ra 1 dataset voi 2 thuat toan FCFS va SJF
+                label: 'Thời gian chờ đợi trung bình',
+                data: [waitingTimes.fcfs, waitingTimes.sjf],
+                backgroundColor: 'rgba(253, 140, 132, 0.5)',
+            }]
+        };
+
+        // Dữ liệu cho biểu đồ thông lượng
+        const throughputData = {
+    labels: fcfsThroughput.map(d => d.time),
+    datasets: [
+        {
+            label: 'FCFS',
+            data: fcfsThroughput.map(d => d.throughput),
+            backgroundColor: 'rgba(75, 192, 192, 0.5)',
+            fill: true,
+        },
+        {
+            label: 'SJF',
+            data: sjfThroughput.map(d => d.throughput),
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            fill: true,
+        }
+    ]
+};
+
+        // Tạo biểu đồ thời gian chờ đợi
+        const ctxWaiting = document.getElementById('waitingChart').getContext('2d');
+        new Chart(ctxWaiting, {
+            type: 'bar',
+            // Loai bieu do la bar chart
+            data: waitingData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Thời gian (đơn vị)'
+                        }
+                    }
+                }
+            }
+        });
+        // Tao bieu do thoi gian cho FCFS va SJF
+
+        // Tạo biểu đồ thông lượng
+        const ctxThroughput = document.getElementById('throughputChart').getContext('2d');
+new Chart(ctxThroughput, {
+    type: 'line',
+    data: {
+        labels: fcfsThroughput.map(d => d.time),
+        datasets: [
+            {
+                label: 'FCFS',
+                data: fcfsThroughput.map(d => d.throughput),
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                fill: true,
+            },
+            {
+                label: 'SJF',
+                data: sjfThroughput.map(d => d.throughput),
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                fill: true,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Biểu đồ thông lượng theo thời gian'
+            }
+        },
+        scales: {
+            x: {
+                type: 'linear',
+                title: {
+                    display: true,
+                    text: 'Thời gian (giây)'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Thông lượng (tiến trình/giây)'
+                },
+                min: 0,
+            }
+        },
+    },
+});
+        // Tao bieu do thong luong cho FCFS va SJF
+    </script>
+</body>
+</html>
