@@ -39,10 +39,21 @@
     <Compile Include="Bai1\NhanVien.cs" />
     <Compile Include="Bai2\PhanSo.cs" />
     <Compile Include="Bai4\HinhTron.cs" />
+    <Compile Include="BaiTap4-17b\Controller.cs" />
+    <Compile Include="BaiTap4-17b\Desktop.cs" />
+    <Compile Include="BaiTap4-17b\Invoice.cs" />
+    <Compile Include="BaiTap4-17b\Laptop.cs" />
+    <Compile Include="BaiTap4-17b\Phone.cs" />
+    <Compile Include="BaiTap4-17b\ProductManager.cs" />
+    <Compile Include="BaiTap4-17b\View.cs" />
     <Compile Include="BaiTap4-17\HoaDon.cs" />
-    <Compile Include="ViDu.cs" />
+    <Compile Include="BaiTap4-17b\ProductType.cs" />
+    <Compile Include="BaiTap5-18\Cources.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Bai3\SinhVien.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BaiTap5-18b\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

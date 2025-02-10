@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tuan_1.BaiTap4_17b;
+using Tuan_1.BaiTap5_18;
 
 namespace Tuan_1
 {
@@ -87,6 +89,27 @@ namespace Tuan_1
                             sv.Xuat();
                             break;
                         }
+                    case 4:
+                    {
+                        View view = new View();
+                        Controller controller = new Controller(view);
+                        controller.Run();
+                        break;
+                    }
+                    case 5:
+                    {
+                        Cources c = new Cources();
+                        try
+                        {
+                            c.Nhap();
+                        }
+                        catch (Exception ex)
+                        {
+                            throw ex;
+                        }
+                        c.Xuat();
+                        break;
+                    }
 
                     default:
                         Console.Write("Lua chon khong phu hop!");

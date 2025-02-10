@@ -3,32 +3,64 @@
   "WorkspaceRootPath": "D:\\HocKi4\\HDT\\HDT_LT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|d:\\hocki4\\hdt\\hdt_lt\\tuan_1\\baitap4-17\\vidu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\baitap4-17\\vidu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|d:\\hocki4\\hdt\\hdt_lt\\tuan_1\\baitap5-18\\cources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\baitap5-18\\cources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|d:\\hocki4\\hdt\\hdt_lt\\tuan_1\\baitap4-17\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\baitap4-17\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\baitap4-17\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\bai1\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\bai1\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\bai4\\hinhtron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\bai4\\hinhtron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\bai3\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\bai3\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\bai1\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\bai1\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\bai2\\phanso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\bai2\\phanso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\bai3\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\bai3\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\baitap4-17b\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\baitap4-17b\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\baitap4-17b\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\baitap4-17b\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\baitap4-17b\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\baitap4-17b\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|d:\\hocki4\\hdt\\hdt_lt\\tuan_1\\baitap4-17b\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\baitap4-17b\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\baitap4-17b\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\baitap4-17b\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\baitap4-17b\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\baitap4-17b\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\baitap4-17b\\phone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\baitap4-17b\\phone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|D:\\HocKi4\\HDT\\HDT_LT\\tuan_1\\baitap4-17b\\laptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23124897-6DC9-42AF-ACA1-C7F36916BBDC}|Tuan_1\\Tuan_1.csproj|solutionrelative:tuan_1\\baitap4-17b\\laptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\PhanSo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,12 +83,113 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ViDu.cs",
-              "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17\\ViDu.cs",
-              "RelativeDocumentMoniker": "Tuan_1\\BaiTap4-17\\ViDu.cs",
-              "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17\\ViDu.cs",
-              "RelativeToolTip": "Tuan_1\\BaiTap4-17\\ViDu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIBAAABAAAAAAAAAA==",
+              "Title": "Cources.cs",
+              "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap5-18\\Cources.cs",
+              "RelativeDocumentMoniker": "Tuan_1\\BaiTap5-18\\Cources.cs",
+              "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap5-18\\Cources.cs*",
+              "RelativeToolTip": "Tuan_1\\BaiTap5-18\\Cources.cs*",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAcwJwAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T14:33:23.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "View.cs",
+              "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\View.cs",
+              "RelativeDocumentMoniker": "Tuan_1\\BaiTap4-17b\\View.cs",
+              "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\View.cs",
+              "RelativeToolTip": "Tuan_1\\BaiTap4-17b\\View.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAiwDQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T04:17:03.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\Invoice.cs",
+              "RelativeDocumentMoniker": "Tuan_1\\BaiTap4-17b\\Invoice.cs",
+              "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\Invoice.cs",
+              "RelativeToolTip": "Tuan_1\\BaiTap4-17b\\Invoice.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowCkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T04:16:13.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductManager.cs",
+              "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\ProductManager.cs",
+              "RelativeDocumentMoniker": "Tuan_1\\BaiTap4-17b\\ProductManager.cs",
+              "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\ProductManager.cs",
+              "RelativeToolTip": "Tuan_1\\BaiTap4-17b\\ProductManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T04:15:47.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Phone.cs",
+              "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\Phone.cs",
+              "RelativeDocumentMoniker": "Tuan_1\\BaiTap4-17b\\Phone.cs",
+              "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\Phone.cs",
+              "RelativeToolTip": "Tuan_1\\BaiTap4-17b\\Phone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T04:15:17.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Laptop.cs",
+              "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\Laptop.cs",
+              "RelativeDocumentMoniker": "Tuan_1\\BaiTap4-17b\\Laptop.cs",
+              "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\Laptop.cs",
+              "RelativeToolTip": "Tuan_1\\BaiTap4-17b\\Laptop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T04:14:54.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Controller.cs",
+              "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\Controller.cs",
+              "RelativeDocumentMoniker": "Tuan_1\\BaiTap4-17b\\Controller.cs",
+              "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\Controller.cs",
+              "RelativeToolTip": "Tuan_1\\BaiTap4-17b\\Controller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T04:09:32.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Desktop.cs",
+              "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\Desktop.cs",
+              "RelativeDocumentMoniker": "Tuan_1\\BaiTap4-17b\\Desktop.cs",
+              "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\Desktop.cs",
+              "RelativeToolTip": "Tuan_1\\BaiTap4-17b\\Desktop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T04:07:35.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductType.cs",
+              "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\ProductType.cs",
+              "RelativeDocumentMoniker": "Tuan_1\\BaiTap4-17b\\ProductType.cs",
+              "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17b\\ProductType.cs",
+              "RelativeToolTip": "Tuan_1\\BaiTap4-17b\\ProductType.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA1wB0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-07T13:06:06.888Z",
               "EditorCaption": ""
@@ -69,7 +202,7 @@
               "RelativeDocumentMoniker": "Tuan_1\\BaiTap4-17\\HoaDon.cs",
               "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\BaiTap4-17\\HoaDon.cs",
               "RelativeToolTip": "Tuan_1\\BaiTap4-17\\HoaDon.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAcwDUAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAiwHoAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T04:03:12.964Z",
               "EditorCaption": ""
@@ -84,7 +217,8 @@
               "RelativeToolTip": "Tuan_1\\Bai2\\PhanSo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T08:51:49.894Z"
+              "WhenOpened": "2025-02-02T08:51:49.894Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -94,49 +228,53 @@
               "RelativeDocumentMoniker": "Tuan_1\\Bai4\\HinhTron.cs",
               "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Bai4\\HinhTron.cs",
               "RelativeToolTip": "Tuan_1\\Bai4\\HinhTron.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvwgAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T08:50:27.933Z"
+              "WhenOpened": "2025-02-02T08:50:27.933Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Program.cs",
               "RelativeDocumentMoniker": "Tuan_1\\Program.cs",
               "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Program.cs",
               "RelativeToolTip": "Tuan_1\\Program.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAD4v0UAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAiwG0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T08:42:00.681Z"
+              "WhenOpened": "2025-02-02T08:42:00.681Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "NhanVien.cs",
               "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Bai1\\NhanVien.cs",
               "RelativeDocumentMoniker": "Tuan_1\\Bai1\\NhanVien.cs",
               "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Bai1\\NhanVien.cs",
               "RelativeToolTip": "Tuan_1\\Bai1\\NhanVien.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAmwJgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAIwGMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T01:23:33.693Z"
+              "WhenOpened": "2025-02-02T01:23:33.693Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SinhVien.cs",
               "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Bai3\\SinhVien.cs",
               "RelativeDocumentMoniker": "Tuan_1\\Bai3\\SinhVien.cs",
               "ToolTip": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\Bai3\\SinhVien.cs",
               "RelativeToolTip": "Tuan_1\\Bai3\\SinhVien.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowDEAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAA1wDEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T08:43:26.959Z"
+              "WhenOpened": "2025-01-29T08:43:26.959Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "PhanSo.cs",
               "DocumentMoniker": "D:\\HocKi4\\HDT\\HDT_LT\\Tuan_1\\PhanSo.cs",
               "RelativeDocumentMoniker": "Tuan_1\\PhanSo.cs",
